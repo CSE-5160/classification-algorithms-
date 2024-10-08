@@ -25,29 +25,35 @@ To set up the project, ensure you have Python 3.6 or later installed. You can in
 pip install pandas scikit-learn numpy
 
 
-# Model Performance Summary
+# Model Performance Comparison
 
-This document provides a summary of the performance metrics for different machine learning models evaluated on both the training and test sets.
+This document compares the performance of four different machine learning models: Random Forest, Gradient Boosting, Logistic Regression, and Naive Bayes. The comparison is based on evaluation metrics including ROC AUC scores, accuracy, precision, recall, F1 scores, and time taken for evaluation.
 
-| Model             | Metric                  | Train Set Performance             | Test Set Performance              |
-|-------------------|-------------------------|-----------------------------------|-----------------------------------|
-| Linear Regression  | Mean Squared Error      | 1.1717596725456537e-06           | 0.028087724333759903              |
-|                   | R² Score                | 0.9999952473974717                | 0.8863064599446707                |
-| Naive Bayes       | Precision (0)           | 0.98                              | 0.98                              |
-|                   | Recall (0)              | 1.00                              | 1.00                              |
-|                   | F1-score (0)            | 0.99                              | 0.99                              |
-|                   | Support (0)             | 13822                             | 3490                              |
-|                   | Precision (1)           | 1.00                              | 1.00                              |
-|                   | Recall (1)              | 0.99                              | 0.98                              |
-|                   | F1-score (1)            | 0.99                              | 0.99                              |
-|                   | Support (1)             | 17501                             | 4341                              |
-|                   | Accuracy                | 0.99                              | 0.99                              |
-| Random Forest      | Precision (0)           | 1.00                              | 0.99                              |
-|                   | Recall (0)              | 1.00                              | 0.99                              |
-|                   | F1-score (0)            | 1.00                              | 0.99                              |
-|                   | Support (0)             | 13822                             | 3490                              |
-|                   | Precision (1)           | 1.00                              | 0.99                              |
-|                   | Recall (1)              | 1.00                              | 0.99                              |
-|                   | F1-score (1)            | 1.00                              | 0.99                              |
-|                   | Support (1)             | 17501                             | 4341                              |
-|                   | Accuracy                | 1.00                              | 0.99                              |
+## Models Evaluated
+
+- Random Forest
+- Gradient Boosting
+- Logistic Regression
+- Naive Bayes
+
+## Evaluation Metrics
+
+| Metric                       | Random Forest             | Gradient Boosting        | Logistic Regression      | Naive Bayes             |
+|------------------------------|---------------------------|--------------------------|--------------------------|--------------------------|
+| **Time Taken for Evaluation** | 88.93 seconds            | 315.17 second            | 15.20 seconds            | 34.53 seconds            |
+
+## Summary of Results
+
+- **Naive Bayes**:
+  - Best performance across all metrics, including time efficiency, ROC AUC scores, accuracy, precision, recall, and F1 scores.
+  
+- **Gradient Boosting**:
+  - Effective but slower and lower performance compared to Naive Bayes and Logistic Regression.
+  
+- **Random Forest**:
+  - Similar performance to Gradient Boosting, with slightly lower scores across metrics.
+
+## Conclusion
+
+Based on the evaluation, **Naive Bayes** is recommended for its superior performance, efficiency, and excellent generalization across training and test data. For scenarios where interpretability is crucial, **Gradient boosting** is a good alternative.
+
